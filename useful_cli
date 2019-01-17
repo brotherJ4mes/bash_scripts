@@ -1,0 +1,66 @@
+# display stuff
+gtf
+xrandr
+
+
+#keyboard remapping stuff
+setxkbmap -option 'etc'
+xmodmap (not currently used)
+gsettings 
+dconf watch / (then go to tweak tool)
+
+
+# other utilities
+synclient (standar)
+xinput (standard)
+xdotool (brew install)
+xbindkeys (installed from source, w/ out guile)
+upower --dump (standard)
+xev (std)
+xcape (brew install xtst, then install from source)
+xset -q (standard) : check status of numlock etc
+
+
+#library stuff
+ldconfig -p | grep -i [libname]
+
+# audio stuff
+pacmd
+pactl
+
+
+# URLs 
+ game-icons.net
+ http://www.figlet.org/examples.html
+
+
+# trick for getting synclient settings to work
+# 1. disable synaptics Touchpad
+# 2. disable DELL TP
+# 3. enable synaptics TP
+# 4. synclient settings=value, etc.
+# 5. enable DELL TP
+#
+#
+# get logitech mice to scroll naturally
+#
+#xinput set-prop 12  "Evdev Scrolling Distance" -1 1 1
+
+
+
+
+#
+# installing FEH...
+# 1. had to install expat from source (to set docbook_to_man)
+# DOCBOOK_TO_MAN = "/home/kessler/.linuxbrew/Cellar/docbook2x/0.8.8_1/bin/db2x_manxml"
+# 2. then had to install imlib2 from source (brew installs without_x)
+# (also had to include flag --without-x-shm-fd, otherwize feh would never open window on rhino)
+# 3. remember to set prefix = HOME/Cellar/pkg/version; brew link pkg;
+# 4. brew install feh
+# 
+#
+# due to bug (https://github.com/derf/feh/issues/102)
+# brew install
+#
+#
+#

@@ -1,0 +1,5 @@
+tell app "Messages" to activate
+delay 2 
+tell app "System Events"
+	keystroke "," using command down
+end tell

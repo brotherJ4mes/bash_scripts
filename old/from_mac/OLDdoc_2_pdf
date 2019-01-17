@@ -1,0 +1,22 @@
+#!/bin/bash
+
+export infile=$1
+outfile="$(echo $infile | rev | cut -d/ -f1 | rev | tr -d '\' | tr ' ' _ | cut -d. -f1)"
+outfile=Users:kessler:Desktop:${outfile}.pdf
+
+
+echo $outfile
+rm /$(echo $outfile | tr : "/")
+
+#set out_name to "$outfile"
+osascript <<EOF
+set in_name to "$infile"
+set out_name to "$outfile"
+
+tell app "Microsoft Word"
+	open in_name
+	save as active document file name out_name file format format PDF
+	quit
+end tell
+
+EOF
