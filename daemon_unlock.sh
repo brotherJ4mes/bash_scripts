@@ -3,7 +3,7 @@
 while read line; do 
 	if echo $line | grep -q Unlock; then 
 		sleep 1
-		notify-send 'Unlocked!'; # remove this later
+		#notify-send 'Unlocked!'; # remove this later
 		/home/kessler/my_scripts/unlock.sh
 	fi;  
 

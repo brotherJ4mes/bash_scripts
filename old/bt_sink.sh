@@ -17,8 +17,4 @@ echo $sym
 
 
 pactl move-sink-input $id $sym || notify-send 'could NOT set BT!'
-pactl set-default-sink $sym  || notify-send 'could NOT set BT!'
-
-timeout .5 feh -. -x -g 100x100+1 ~/pics/icons/radio-tower.png
-wait
-/home/kessler/my_scripts/unlock.sh
+timeout .2 feh -. -x -g 100x100+1 ~/pics/icons/radio-tower.png

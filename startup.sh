@@ -2,14 +2,14 @@
 ## try sleeping for 5 seconds
 sleep 5; 
 
-notify-send 'ran startup script!'
+notify-send 'hello world!'
 source ~/.bashrc
 
 
 # increase screen res
 big 2> /dev/null
 
-#start xbindkeys
+##start xbindkeys
 xbindkeys
 
 # call unlock script 
