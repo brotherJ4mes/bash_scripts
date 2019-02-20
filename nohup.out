@@ -6,3 +6,102 @@ sys	0m0.035s
 real	0m1.176s
 user	0m0.024s
 sys	0m0.033s
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+string "hangups"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+array of bytes "/home/kessler/Desktop/hangups.desktop" + 0
+array of bytes "/home/kessler/Desktop/hangups.desktop" + 0
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+array of bytes "/home/kessler/Desktop/hangups.desktop" + 0
+array of bytes "/home/kessler/Desktop/hangups.desktop" + 0
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "file:///home/kessler/Desktop/hangups.desktop"
+string "file:///home/kessler/Desktop/hangups.desktop"
+feh WARNING: /home/kessler/pics/icons/nothing-to-say.png: does not exist - skipping
+feh: No loadable images specified.
+See 'man feh' for detailed usage information
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+/home/kessler/my_scripts//daemon_hups.sh: line 4:  9458 Broken pipe             dbus-monitor
+      9459 Terminated              | while read line; do
+    echo $line | grep -i hangups && timeout .5 feh -. -x -g 100x100 /home/kessler/pics/icons/nothing-to-say.png;
+done
+/home/kessler/my_scripts//daemon_hups.sh: line 8: syntax error near unexpected token `done'
+/home/kessler/my_scripts//daemon_hups.sh: line 8: `done'
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"
+string "hangups"

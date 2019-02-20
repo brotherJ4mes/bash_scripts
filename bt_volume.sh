@@ -4,10 +4,14 @@
 #killall feh 2> /dev/null
 
 
+# first try to find bluetooth sink (non-zero, possibly two digits)
 idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[1-9][0-9]?')
 
-echo $idx
-echo $1
+# otherwise adjust global volume (idx = 0)
+[[ -z $idx ]] && idx=0
+
+#echo $idx
+#echo $1
 
 [[ "$1" == "mute" ]] && pactl set-sink-mute $idx toggle
 [[ "$1" == "up" ]] && pactl set-sink-volume $idx +3%

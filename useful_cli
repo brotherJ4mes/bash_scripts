@@ -49,6 +49,9 @@ pactl
 
 
 
+#using grep as a test to do things
+#grep -qi string file.txt && do something for matches
+#grep -qi string file.txt || do something for misses
 #
 # installing FEH...
 # 1. had to install expat from source (to set docbook_to_man)

@@ -2,11 +2,11 @@
 #source /home/kessler/.bashrc
 
 timer=${1:-.1}
-
+#a
 
 # reset autokey
-pgrep autokey | xargs kill 
-/bin/autokey-gtk 2> /dev/null &
+#pgrep autokey | xargs kill 
+#/bin/autokey-gtk 2> /dev/null &
 
 
 # new method to determine if external monitor is present (faster)

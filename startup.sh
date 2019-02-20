@@ -7,7 +7,7 @@ source ~/.bashrc
 
 
 # increase screen res
-big 2> /dev/null
+#big 2> /dev/null
 
 ##start xbindkeys
 xbindkeys
@@ -17,3 +17,4 @@ xbindkeys
 
 # start lock monitor
 nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
+nohup /home/kessler/my_scripts/daemon_hups.sh &> /dev/null &
