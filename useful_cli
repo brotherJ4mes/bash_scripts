@@ -18,8 +18,8 @@ xbindkeys (installed from source, w/ out guile)
 upower --dump (standard)
 xev (std)
 xcape (brew install xtst, then install from source)
-xset -q (standard) : check status of numlock etc
-
+xset -q (standard) : check status of numlock et
+bind (change bash shortcuts...do you really wanna tho? maybe just use this for ref)
 
 #library stuff
 ldconfig -p | grep -i [libname]
@@ -67,3 +67,9 @@ pactl
 #
 #
 #
+#
+#pretty colors
+#
+##280F0F  dark pink? for night time term bg
+##FFFFDD  light yellow (rhino bg)
+##379591  turqouise 

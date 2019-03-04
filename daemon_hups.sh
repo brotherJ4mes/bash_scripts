@@ -1,7 +1,7 @@
 #!/bin/bash
 dbus-monitor | 
 while read line; 
-	do echo $line | grep -i hangups && timeout .5 feh -. -x -g 100x100 /home/kessler/pics/icons/nothing-to-say.png; done
+	do echo $line | grep -i hangups && ~/my_scripts/toast.sh nothing-to-say.png .5; done
 
 	# backdoor for runaways
 	if [ -e /home/kessler/.backdoors/hups ]; then break; 

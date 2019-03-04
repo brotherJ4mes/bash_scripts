@@ -9,26 +9,27 @@ timer=${2:-.2}
 case "$1" in 
 	w)   # settings for using in laptop mode (i.e. windows keyboard)
 	echo "win" > .kb
-	timeout $timer feh -. -x -g 100x100+1 ~/pics/icons/dungeon-light.png 
-	xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock
+	~/my_scripts/toast.sh dungeon-light.png $timer
+	xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock # turn off caps if it's on
 	killall xcape
-	wmctrl -n 2
-        /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['altwin:swap_alt_win, ctrl:nocaps, shift:both_capslock']"
+	wmctrl -n 2                                                                                                                
+        /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['altwin:swap_alt_win, ctrl:nocaps, shift:both_capslock' ]"
+	/bin/xmodmap ~/my_scripts/.xmodmap
         /home/kessler/.local/bin/xcape -e 'Control_L=Escape'
-	/bin/xmodmap ~/.Xmodmap
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
 	;;
 
 	m) # settings for docked mode (i.e. mac keyboard)
 	echo mac > .kb
-	timeout $timer feh -. -x -g 100x100+1 ~/pics/icons/shiny-apple.png
+	~/my_scripts/toast.sh shiny-apple.png $timer
 	xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock
         killall xbindkeys 2> /dev/null
         killall xcape
 	wmctrl -n 1
-        /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['ctrl:nocaps, shift:both_capslock, apple:alupckeys']"
-        /home/kessler/.local/bin/xcape -e 'Control_L=Escape'
+        /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['ctrl:nocaps, shift:both_capslock, apple:alupckeys' ]"
         /home/kessler/.local/bin/xbindkeys
+	/bin/xmodmap ~/my_scripts/.xmodmap
+        /home/kessler/.local/bin/xcape -e 'Control_L=Escape'
 	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
 	;;
 esac
