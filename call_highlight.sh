@@ -1,6 +1,6 @@
 #!/bin/bash
 
-winttl=$(xdotool get active window get windowname)
+winttl=$(xdotool getactivewindow getwindowname)
 
 fn=$(echo $winttl | cut -d\  -f1)
 pg=$(echo $winttl | cut -d\  -f3 | cut -d/ -f1)

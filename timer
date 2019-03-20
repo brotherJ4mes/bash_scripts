@@ -1,0 +1,29 @@
+#!/bin/bash
+sleep .1
+xdotool key super+Up # detach window if necessary
+#xdotool key control+l # clear screen doesn't work
+sleep .5
+xdotool key --clearmodifiers shift+F10 r 8
+sleep .5
+wmctrl -r :ACTIVE: -e 0,10000,0,300,100 # move to top right
+wmctrl -r :ACTIVE: -N TIMER # rename window
+
+
+
+
+
+
+end=$(date -d "+ $1 minutes" +%s)  #define date in epoch seconds
+diff=$(( $end - $(date +%s) ))    #define difference 
+
+while [[ $diff -gt 0 ]]; do
+	echo -ne "$(date -u -d @$diff +%H:%M:%S )\r"
+	diff=$(( $end - `date +%s` ))    #define difference 
+	sleep 1;
+done
+
+# times up!
+feh -x -. $HOME/pics/icons/sands-of-time.png
+exit
+	
+
