@@ -6,6 +6,6 @@ source ~/.scriptsrc # load paths
 toast.sh keyboard.png .5
 pkill autokey 
 pkill xbindkeys
-/bin/xmodmap -p | grep Alt_L && /bin/xmodmap /home/kessler/.Xmodmap # run xmodmap if necessary
+#/bin/xmodmap -p | grep Alt_L && /bin/xmodmap /home/kessler/.Xmodmap # run xmodmap if necessary
 /bin/autokey-gtk & #> /dev/null & 
 xbindkeys

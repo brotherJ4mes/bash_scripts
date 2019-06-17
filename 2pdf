@@ -1,0 +1,10 @@
+#!/bin/bash
+
+[[ $# -eq 0 ]] && exit
+
+
+in=$1
+outdir=$(dirname $in)
+
+libreoffice --headless --convert-to pdf --outdir $outdir $in
+

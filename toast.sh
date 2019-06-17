@@ -1,8 +1,9 @@
 #!/bin/bash
 icon="/home/kessler/pics/icons/$1"
-timer=$2
+timer=${2:-1}
 
-timeout $2 /home/kessler/.linuxbrew/bin/feh -. -x -g 100x100 $icon & echo $! > ~/my_scripts/.toastpid
+
+timeout $timer /home/kessler/.linuxbrew/bin/feh -. -x -g 100x100 $icon & echo $! > ~/my_scripts/.toastpid
 
 #sleep .1
 #/home/kessler/.linuxbrew/bin/xdotool key Super+Tab

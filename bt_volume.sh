@@ -5,13 +5,14 @@
 
 
 # first try to find bluetooth sink (non-zero, possibly two digits)
-idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[1-9][0-9]?')
+#idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[1-9][0-9]?')
+idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort | tail -n1)
 
 # otherwise adjust global volume (idx = 0)
-[[ -z $idx ]] && idx=0
+[[ -z $idx ]] && idx=1
 
-#echo $idx
-#echo $1
+echo $idx
+echo $1
 
 [[ "$1" == "mute" ]] && pactl set-sink-mute $idx toggle
 [[ "$1" == "up" ]] && pactl set-sink-volume $idx +3%

@@ -10,11 +10,16 @@ source ~/.bashrc
 #big 2> /dev/null
 
 ##start xbindkeys
-xbindkeys
+#xbindkeys
+
+
+
 
 # call unlock script 
+rm ~/.kb # keyboard has not been configured
 /home/kessler/my_scripts/unlock.sh
 
 # start lock monitor
 nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
+# start hangups monitor
 nohup /home/kessler/my_scripts/daemon_hups.sh &> /dev/null &

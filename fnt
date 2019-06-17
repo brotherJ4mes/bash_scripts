@@ -1,0 +1,17 @@
+#!/bin/bash
+
+fontstr="Menlo $1"
+
+
+# local
+key='/org/gnome/terminal/legacy/profiles:/:425cff8d-2fe7-49e0-850a-2d5953a7164a/font'
+dconf write $key "'Menlo $1'"
+
+## rhino
+key='/org/gnome/terminal/legacy/profiles:/:0b06c44c-ba09-451d-95d5-405fbbac85d1/font'
+dconf write $key "'Menlo $1'"
+
+# hangouts 
+key='/org/gnome/terminal/legacy/profiles:/:b420d429-5303-4e14-8e23-84cc067342da/font'
+dconf write $key "'Menlo $1'"
+

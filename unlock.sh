@@ -1,16 +1,14 @@
 #!/bin/bash
-#source /home/kessler/.bashrc
 
-export PATH=$HOME/.linuxbrew/bin:$PATH
+source /home/kessler/.scriptsrc
+
+
+[[ $1 == "-f" ]] && rm /home/kessler/.kb
 
 # new method to determine if external monitor is present (faster)
 dock=$(lsusb | grep -ic via)
 [[ $dock -eq 0 ]] &&  time /home/kessler/my_scripts/set_kb.sh w 
 [[ $dock -gt 1 ]] &&  time /home/kessler/my_scripts/set_kb.sh m 
-
-# newest : only run set_kb is monitor type has changed!
-#[[ $dock -eq 0 & $(cat .kb) != 'win' ]] &&  time /home/kessler/my_scripts/set_kb.sh w $timer
-#[[ $dock -gt 1 & $(cat .kb) != 'mac' ]] &&  time /home/kessler/my_scripts/set_kb.sh m $timer
 
 # run any other settings that dont seem to stick
 ids=$(xinput | grep -i logitech | grep -Eo '=[0-9]{1,2}' | grep -Eo '[0-9]+');
