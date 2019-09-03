@@ -6,7 +6,8 @@
 
 # first try to find bluetooth sink (non-zero, possibly two digits)
 #idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[1-9][0-9]?')
-idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort | tail -n1)
+idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort -n  | tail -n1)
+#idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort -n  | head -n1)
 
 # otherwise adjust global volume (idx = 0)
 [[ -z $idx ]] && idx=1

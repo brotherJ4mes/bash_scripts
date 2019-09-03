@@ -12,14 +12,11 @@ source ~/.bashrc
 ##start xbindkeys
 #xbindkeys
 
-
-
-
 # call unlock script 
 rm ~/.kb # keyboard has not been configured
 /home/kessler/my_scripts/unlock.sh
 
 # start lock monitor
 nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
-# start hangups monitor
-nohup /home/kessler/my_scripts/daemon_hups.sh &> /dev/null &
+# start hangups monitor (no longer necessary---use phone noises)
+#nohup /home/kessler/my_scripts/daemon_hups.sh &> /dev/null &

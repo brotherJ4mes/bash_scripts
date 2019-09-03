@@ -48,6 +48,12 @@ pactl
 
 
 
+# keyboard shortcut stuff:
+# sometimes shortcuts get "bound" to stuff that doesn't show up in the settings gui
+# this is super annoying b/c the gui WILL still let you set them but they just wont do anything
+# use dconf editor which has much more comprehensive shortcuts and find the shortcut that 
+# doesn't work and unset it there
+# /org/gnome/desktop/wm/keybindings (window switch directly)
 
 #using grep as a test to do things
 #grep -qi string file.txt && do something for matches

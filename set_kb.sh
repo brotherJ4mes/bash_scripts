@@ -9,7 +9,6 @@ case "$1" in
 	toast.sh dungeon-light.png .5 # show window icon during configuration
 	xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock # turn off caps if it's on
 	killall xcape
-	wmctrl -n 2  # change to 2 workspaces
         /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['altwin:swap_alt_win, ctrl:nocaps, shift:both_capslock' ]"
         xcape -e 'Control_L=Escape'
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
@@ -22,7 +21,6 @@ case "$1" in
 	toast.sh shiny-apple.png .5 # show apple icon during configuration
 	xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock
         killall xcape
-	wmctrl -n 1 # change to 1 workspace
         /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['ctrl:nocaps, shift:both_capslock, apple:alupckeys' ]"
         xcape -e 'Control_L=Escape'  
 	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
@@ -38,4 +36,4 @@ esac
 killall autocutsel
 autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
 autocutsel -selection PRIMARY -fork &
-eset_kb.sh
+reset_kb.sh

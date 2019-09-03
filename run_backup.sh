@@ -5,8 +5,6 @@
 # set path of backup directory
 bu_dir=$HOME/.backup/
 
-# cp things to bu_dir
-cp -at $bu_dir $HOME/.bashrc
 
 # cp things to bu_dir/.config
 cp -at ${bu_dir}/.config/ $HOME/.config/{autokey,dconf,feh,autostart,opera/Preferences}
