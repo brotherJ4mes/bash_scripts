@@ -5,7 +5,7 @@
 hl_str=$(xclip -o) 
 
 # determine if string is a url or search phrase
-echo $hl_str | grep -Ei '\.gov|\.com|\.org|\.net' 
+echo $hl_str | grep -Ei 'http|\.gov|\.com|\.org|\.net' 
 
 if [ $? -eq 1 ]; then
 	echo google searching...

@@ -56,8 +56,8 @@ pactl
 # /org/gnome/desktop/wm/keybindings (window switch directly)
 
 #using grep as a test to do things
-#grep -qi string file.txt && do something for matches
-#grep -qi string file.txt || do something for misses
+#grep -qi string file.txt && { do first; do second && do third; return/break? }
+#grep -qi string file.txt || { do first; do second; do third; return/break? }
 #
 # installing FEH...
 # 1. had to install expat from source (to set docbook_to_man)

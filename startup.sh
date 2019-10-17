@@ -3,7 +3,7 @@
 sleep 5; 
 
 notify-send 'hello world!'
-source ~/.bashrc
+source ~/.scriptsrc
 
 
 # increase screen res

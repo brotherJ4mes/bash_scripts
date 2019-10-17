@@ -20,9 +20,4 @@ paste -d, dates.tmp dates.tmp  <(cut -d, -f 4- fields.tmp) >> out.csv
 sed -i 's/ , /,/g;s/,/, /g' out.csv 
 
 
-
-
-
-
-
 rm *.tmp

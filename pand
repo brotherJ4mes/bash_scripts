@@ -1,4 +1,4 @@
-/bin/google-chrome --app=https://www.pandora.com
+nohup /bin/google-chrome --app=https://www.pandora.com &> /dev/null &
 
 #/bin/google-chrome 2> /dev/null & # open chrome
 #sleep 1.5

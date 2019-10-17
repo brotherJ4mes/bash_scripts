@@ -1,4 +1,4 @@
-/bin/google-chrome --app=https://play.spotify.com
+nohup /bin/google-chrome --app=https://play.spotify.com &> /dev/null &
 
 
 #/bin/google-chrome 2> /dev/null & # open chrome

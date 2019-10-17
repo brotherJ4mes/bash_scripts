@@ -2,13 +2,12 @@
 
 source /home/kessler/.scriptsrc
 
-
-[[ $1 == "-f" ]] && rm /home/kessler/.kb
+#[[ $1 == "-f" ]] && rm /home/kessler/.kb
 
 # new method to determine if external monitor is present (faster)
-dock=$(lsusb | grep -ic via)
-[[ $dock -eq 0 ]] &&  time /home/kessler/my_scripts/set_kb.sh w 
-[[ $dock -gt 1 ]] &&  time /home/kessler/my_scripts/set_kb.sh m 
+dock=$(lsusb | grep -ic via)  # (viacomm is the name of the dock)
+[[ $dock -eq 0 ]] &&  /home/kessler/my_scripts/set_kb.sh w 
+[[ $dock -gt 1 ]] &&  /home/kessler/my_scripts/set_kb.sh m 
 
 # run any other settings that dont seem to stick
 ids=$(xinput | grep -i logitech | grep -Eo '=[0-9]{1,2}' | grep -Eo '[0-9]+');
@@ -16,7 +15,6 @@ ids=$(xinput | grep -i logitech | grep -Eo '=[0-9]{1,2}' | grep -Eo '[0-9]+');
     do
         xinput set-prop $id "Evdev Scrolling Distance" -1 1 1;
     done
-
 
 synclient singletaptimeout=100
 synclient palmdetect=1

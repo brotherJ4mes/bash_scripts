@@ -1,5 +1,6 @@
 #!/bin/bash
-/home/kessler/.linuxbrew/bin/gdbus monitor -y -d org.freedesktop.login1 | \
+#/home/kessler/.linuxbrew/bin/gdbus monitor -y -d org.freedesktop.login1 | \
+/bin/gdbus monitor -y -d org.freedesktop.login1 | \
 while read line; do 
 	if echo $line | grep -q Unlock; then 
 		sleep 1

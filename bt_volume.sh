@@ -5,9 +5,9 @@
 
 
 # first try to find bluetooth sink (non-zero, possibly two digits)
-#idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[1-9][0-9]?')
-idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort -n  | tail -n1)
-#idx=$(pactl list sinks | grep -E '^Sink' | grep -Eo '[0-9]+' | sort -n  | head -n1)
+#  search for the patter #NN in between the words sink and 'bluez' to determine the sink index for BT
+#idx=$(pactl list sinks | sed -nr '/^Sink/,/bluez/p; /bluez/q' | grep -Eo '#[0-9]+' | tr -d '#')
+idx=$(pactl list sinks | grep -i "RUNNING" -B1 | grep -oE '[0-9]+')
 
 # otherwise adjust global volume (idx = 0)
 [[ -z $idx ]] && idx=1
@@ -26,7 +26,7 @@ echo $stats | grep -iq 'Mute: yes' && ~/my_scripts/toast.sh mute.png .25
 
 lvl=$(echo $stats | grep -oE '[0-9]{1,3}%' | head -n1)
 #timeout .25 feh -. -x -g 100x100 ~/pics/icons/headphones.png --info "echo '    $lvl'" -e "yudit/18"
-timeout .25 ~/.linuxbrew/bin/feh -. -x -g 100x100 ~/pics/icons/headphones.png --info "echo '    $lvl'" -e "yudit/18"
+timeout .5 ~/.linuxbrew/bin/feh -. -x -g 150x150-1 ~/pics/icons/headphones.png --info "echo '     $lvl'" -e "yudit/24"
 
 
 
