@@ -12,17 +12,14 @@ wmctrl -r :ACTIVE: -N TIMER # rename window
 
 
 
-end=$(date -d "+ $1 minutes" +%s)  #define date in epoch seconds
-diff=$(( $end - $(date +%s) ))    #define difference 
+start=$(date +%s)  #define date in epoch seconds
+diff=$(( $(date +%s) - $start ))    #define difference 
 
-while [[ $diff -gt 0 ]]; do
+while true; do
 	echo -ne "$(date -u -d @$diff +%H:%M:%S )\r"
-	diff=$(( $end - `date +%s` ))    #define difference 
+	diff=$(( `date +%s` -start ))    #define difference 
 	sleep 1;
 done
 
-# times up!
-feh -x -. -g -1 +1000+500 $HOME/pics/icons/sands-of-time.png
-exit
 	
 

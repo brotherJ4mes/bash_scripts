@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source ~/.scriptsrc
+
 winttl=$(xdotool getactivewindow getwindowname)
 
 fn=$(echo $winttl | cut -d\  -f1)
@@ -8,10 +10,10 @@ pg=$(echo $winttl | cut -d\  -f3 | cut -d/ -f1)
 # do checks to avoid calling this by accident
 if [[ $fn != *pdf || $pg != +([0-9]) ]]; then
 	echo fn or pg is wrong
+	/home/kessler/my_scripts/toast.sh skull.png .5
 	exit
 fi
 
-echo 'no errors'
 
 cd $HOME/docs/papers/
 
@@ -46,5 +48,7 @@ done
 #str=$(xclip -o | tr '\n' ' ' | sed -r 's/- /-/g') # capture highlighted text (replace \n with space except for hyphens)
 str=$(xclip -o | tr '\n' ' ') # capture highlighted text (replace \n with space except for hyphens)
 # save highlighted text to notes folder
-#echo $str >> notes/${fn%%.pdf}.txt
+echo $str >> notes/${fn%%.pdf}.txt
 python3 $HOME/my_scripts/highlight.py $fn $pg $col "$str" # use PyMuPDF to highlight
+
+/home/kessler/my_scripts/toast.sh paint-brush.png .5

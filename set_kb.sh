@@ -11,8 +11,10 @@ case "$1" in
         /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['altwin:swap_alt_win, ctrl:nocaps, shift:both_capslock' ]"
         xcape -e 'Control_L=Escape'
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
-	/bin/xmodmap -e "keycode 112=Alt_R" # make pgup act as alt (its missing under remap)
+	/usr/bin/xmodmap -e "keycode 112=Alt_R" # make pgup act as alt (its missing under remap)
+	#/bin/xmodmap ~/.Xmodmap # make pgup act as alt (its missing under remap)
 	echo win > ~/.kb
+	fnt 11
 	;;
 
 	m) # settings for docked mode (i.e. mac keyboard)
@@ -24,6 +26,7 @@ case "$1" in
         xcape -e 'Control_L=Escape'  
 	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
 	echo mac > ~/.kb
+	fnt 13
 	;;
 esac
 	

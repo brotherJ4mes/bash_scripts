@@ -20,3 +20,7 @@ rm ~/.kb # keyboard has not been configured
 nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
 # start hangups monitor (no longer necessary---use phone noises)
 #nohup /home/kessler/my_scripts/daemon_hups.sh &> /dev/null &
+
+
+
+while true; do find ~/Downloads | entr -dp open_pdf.sh; done
