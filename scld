@@ -1,9 +1,0 @@
-/bin/google-chrome --app=https://www.soundcloud.com
-
-#/bin/google-chrome 2> /dev/null & # open chrome
-#sleep 1.5
-#/home/kessler/.linuxbrew/bin/xdotool key control+shift+p 2> /dev/null  # open web player extensions
-#sleep 1 
-#wmctrl -c Google Chrome    # close original window
-#wmctrl -r :ACTIVE: -e 0,1176,702,754,422 # resize to right bottom corner
-
