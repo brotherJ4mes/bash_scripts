@@ -1,0 +1,45 @@
+library(ncdf4)
+library(viridisLite)
+try(dev.off(), T)
+
+#ncid <- nc_open('sample_temps.nc')
+ncid <- nc_open('../1995_may-august_UVT.nc')
+tri <- ncvar_get(ncid, 'nv')
+x   <- ncvar_get(ncid,'lon')-360
+y   <- ncvar_get(ncid,'lat')
+xc  <- ncvar_get(ncid,'lonc')-360
+yc  <- ncvar_get(ncid,'latc')
+U   <- ncvar_get(ncid,'u')[,1,]
+V   <- ncvar_get(ncid,'v')[,1,]
+t   <- ncvar_get(ncid,'time')
+# multi time dims
+TEMP <- ncvar_get(ncid,'temp')[,1,]
+
+sel<- seq(1,length(xc),by=15)
+ncolors <- 21
+cmap <- viridis(ncolors)
+
+
+zmin <- floor(min(TEMP))
+zmax <- ceiling(max(TEMP))
+
+
+for (i in 1:length(t)){
+	print(i)
+	# assign vars
+	temp <- TEMP[,i]
+	u <- U[,i]
+	v <- V[,i]
+
+
+	# make plots
+	png(sprintf('frames/%03i.png',i), width=1920, height=1080)
+	#tricontour(x, y, tri, temp, cmap, grid=T, zlim=c(-1,20))
+	tricontour(x, y, tri, temp, cmap, grid=T, zlim=c(zmin,zmax))
+	arrows(xc[sel],yc[sel],xc[sel]+u[sel],yc[sel]+v[sel], length=.03)
+	rect(-79.5, 46.8, -80.5, 47.3, col='white')
+	text(-80,47, '10 cm/s'); 
+	arrows(-80, 47.2, -80+.1, 47.2, length=.03)
+	title(main=paste('valid',strftime(as.POSIXct(t[i]*3600*24, origin='1858-11-17 00:00'), tz='GMT')))
+	dev.off()
+}

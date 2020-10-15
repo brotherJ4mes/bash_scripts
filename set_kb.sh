@@ -37,4 +37,3 @@ esac
 killall autocutsel
 autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
 autocutsel -selection PRIMARY -fork &
-#reset_kb.sh

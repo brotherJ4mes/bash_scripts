@@ -1,0 +1,74 @@
+#library(geometry)
+tricontour <- function(x, y, tri, z, cmap, zlim=range(z), cb_horz=F, grid=F, oncell=F){
+
+	# to do:
+        #	handle variable on cell
+	#	handle zlim in the case that range(z) exceeds manually defined zlim (should  NA)
+	# 	add breaks?
+	#	extend to vector variable (seperate function)
+	# 	fix asp ratio
+	#	customize cbar positioning (x0,y0... maybe assume default width)
+
+
+
+	if (max(temp) > max(zlim) | min(temp) < min(zlim)) { stop('range of Z data exceeds manually defined zlim') }
+		
+	XY <- cbind(x, y)
+
+	#if (oncell) # do something easeir proably? tpempc <- temp;  xc <- x; yc <- y 
+	#else {
+	if (!oncell){
+		zc <- apply(matrix(z[tri], ncol=3), 1, mean)
+		xc <- matrix(XY[tri,1], ncol=3) 
+		yc <- matrix(XY[tri,2], ncol=3)
+	}
+
+	# map values to colors in colormap
+	nlevs <- length(cmap)
+	levs <- pretty(zlim, nlevs)
+	cidx <- findInterval(zc, levs)
+
+	# set up plot window
+	plot.new()
+	par(fig=c(0,1,0,1)) #, bty='o')
+	plot.window(range(xc), range(yc))
+	mainpar <- par()
+
+	# loop thru/plot all cells
+	for (i in 1:nrow(tri)){
+		polygon(xc[i,], yc[i,], col=cmap[cidx[i]], NA)
+	}
+
+	# draw axes and grid if desired
+	axis(1); axis(2); box()
+	if (grid){ abline(v=pretty(x,max(x)-min(x)), h=pretty(y,max(y)-min(y)), col='lightgrey', lty=3) }
+
+	# add colorbar
+	if (!cb_horz){
+		par(mar=c(0,0,0,0), fig = c(0.85, 0.875, .45,.9), new = T, las=1); 
+		plot.window(xlim = c(0,1), ylim = range(levs))#, xaxs = "i", yaxs = "i");
+		rect(0, levs[-length(levs)], 1, levs[-1], col = cmap, border=NA)
+		axis(4)
+	}		
+	else {
+		par(mar=c(0,0,0,0), fig = c(0.5,.9,.8,.85), new = T); 
+		plot.window(ylim = c(0,1), xlim = range(levs))#, xaxs = "i", yaxs = "i");
+		rect(levs[-length(levs)], 0,  levs[-1], 1, col = cmap)
+		axis(1)
+	}		
+
+# switch back to "main" figure
+par(mainpar)
+
+}
+
+
+
+
+
+#
+#
+#
+#
+#
+#

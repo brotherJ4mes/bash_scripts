@@ -34,6 +34,7 @@ HANGOUTS_EMOTICONS_TO_EMOJI = {
     '\cat': '\U0001f638',
     '<3cat': '\U0001F63B',
     '<3face': '\U0001F60D',
+    '\check': '\U00002705',		
     '\clock':'\U000023F0',
     '\crab': '\U0001f980',
     '\cry': '\U0001f62d',
