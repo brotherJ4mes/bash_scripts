@@ -2,14 +2,14 @@
 
 # turn trackpad off
 if ! [ -f ~/.tp_off ]; then
-	xinput disable 12;
+	xinput disable 14;
 	#timeout .25 feh -. -x -g 100x100+1 ~/pics/icons/click_red.png
 	~/my_scripts/toast.sh click_red.png 1 
 	touch ~/.tp_off
 		
 # turn trackpad on
 else
-	xinput enable 12;
+	xinput enable 14;
 	#timeout .25 feh -. -x -g 100x100+1 ~/pics/icons/click_green.png
 	~/my_scripts/toast.sh click_green.png  1
 	rm ~/.tp_off
