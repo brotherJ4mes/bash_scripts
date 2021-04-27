@@ -19,6 +19,8 @@
 
 # best (i think)....
 # search for existing window || open a new one
+#wmctrl -xR nautilus.Nautilus || /bin/nautilus 
+
 wmctrl -xR nautilus.Nautilus || /bin/nautilus 
 
 

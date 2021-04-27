@@ -19,4 +19,4 @@ rm ~/.kb # keyboard has not been configured
 # start lock monitor (not sure this is actually doing anything anymore... just press the shortcut 
 #nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
 
-while true; do find ~/Downloads | entr -dp open_pdf.sh; done
+#while true; do find ~/Downloads | entr -dp open_pdf.sh; done

@@ -1,0 +1,9 @@
+[unit]
+Description=My daemon
+
+[Service]
+ExecStart=/home/kessler/my_scripts/dl_watch.sh 
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target 

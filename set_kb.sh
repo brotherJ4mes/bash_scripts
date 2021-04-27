@@ -12,17 +12,19 @@ case "$1" in
         xcape -e 'Control_L=Escape'
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
 	#/usr/bin/xmodmap -e "keycode 112=Alt_R" # make pgup act as alt (its missing under remap)
+	/usr/bin/xmodmap -e "keycode 110 = dead_greek dead_greek dead_greek dead_greek"
 	echo win > ~/.kb
 	fnt 14
+	ws 2
 	;;
 
 	m) # settings for docked mode (i.e. mac keyboard)
 	toast.sh bowen-knot.png .75 # show apple icon during configuration
-	#xset -q | grep -Eo 'Caps Lock:\s+\w+' | grep on && xdotool key Caps_Lock
         killall xcape
         /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['ctrl:nocaps, shift:both_capslock, apple:alupckeys', 'terminate:ctrl_alt_bksp']"
         xcape -e 'Control_L=Escape'  
-	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
+	#[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
+	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo mac > ~/.kb
 	fnt 13
 	ws 1
@@ -38,3 +40,7 @@ esac
 killall autocutsel
 autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
 autocutsel -selection PRIMARY -fork &
+
+# daemon section (using systemctl is a pain due to env differences)
+pkill dl_watch.sh
+nohup ~/my_scripts/dl_watch.sh &> /dev/null &
