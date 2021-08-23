@@ -1,4 +1,5 @@
 #!/bin/bash
+
 function repair(){
 	mac="$1"
 	echo -e 'scan on\n'

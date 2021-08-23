@@ -1,0 +1,7 @@
+#nohup /bin/google-chrome --app='https://meet.google.com/landing?authuser=1' &
+nohup /bin/vivaldi --app="https://app.gotomeeting.com/?meetingId=$1"
+
+# resize
+sleep .5 
+wmctrl -r :ACTIVE: -e 0,0,0,1500,900
+

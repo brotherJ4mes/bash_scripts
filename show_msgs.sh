@@ -2,10 +2,11 @@
 # show or hide sakura (hangups) depending on current state
 
 #str=$1
-str='^Messages$|^Calls$|^Voicemail$'
+str='^Messages$|^Calls$|^Voicemail$|^Incoming\scall:'
+#str='^Messages$'
 
 
-nwind=$(xdotool search --onlyvisible --name $str | wc -l)
+nwind=$(xdotool search --onlyvisible --name "$str" | wc -l)
 if [ $nwind -ne 1 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
 
 

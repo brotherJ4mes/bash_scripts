@@ -12,7 +12,7 @@ case "$1" in
         xcape -e 'Control_L=Escape'
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
 	#/usr/bin/xmodmap -e "keycode 112=Alt_R" # make pgup act as alt (its missing under remap)
-	/usr/bin/xmodmap -e "keycode 110 = dead_greek dead_greek dead_greek dead_greek"
+	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo win > ~/.kb
 	fnt 14
 	ws 2
