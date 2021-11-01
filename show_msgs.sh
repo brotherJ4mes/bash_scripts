@@ -2,7 +2,7 @@
 # show or hide sakura (hangups) depending on current state
 
 #str=$1
-str='^Messages$|^Calls$|^Voicemail$|^Incoming\scall:'
+str='^Messages$|^Calls$|^Voicemail$|^Incoming\scall:|^Call\swith'
 #str='^Messages$'
 
 

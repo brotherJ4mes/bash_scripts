@@ -10,7 +10,8 @@ echo $hl_str | grep -Ei 'http|\.gov|\.com|\.org|\.net'
 if [ $? -eq 1 ]; then
 	echo google searching...
 	srch=$(echo $hl_str | sed -r 's/\s+/\+/g')
-	opera google.com/search?q=$srch
+	echo $srch
+	opera duckduckgo.com/?q=$srch
 else
 	echo going directly to url...
 	opera $hl_str

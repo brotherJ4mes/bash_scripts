@@ -15,7 +15,7 @@ case "$1" in
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo win > ~/.kb
 	fnt 14
-	ws 2
+	/bin/wmctrl -n 2
 	;;
 
 	m) # settings for docked mode (i.e. mac keyboard)
@@ -27,7 +27,7 @@ case "$1" in
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo mac > ~/.kb
 	fnt 13
-	ws 1
+	/bin/wmctrl -n 1
 	;;
 esac
 	
