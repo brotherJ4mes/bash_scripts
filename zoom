@@ -1,6 +1,6 @@
 #nohup /bin/google-chrome --app='https://meet.google.com/landing?authuser=1' &
-#nohup /bin/vivaldi --app="https://zoom.us/j/$1?pwd=$2"
-nohup /bin/vivaldi --app="https://us06web.zoom.us/j/86032531653?pwd=QU5RWjNrOXJSTHp6ZlFzbU01enRJZz09"
+nohup /bin/vivaldi --app="https://zoom.us/j/$1?pwd=$2"
+#nohup /bin/vivaldi --app="https://us06web.zoom.us/j/86032531653?pwd=QU5RWjNrOXJSTHp6ZlFzbU01enRJZz09"
 
 # resize
 sleep .5 

@@ -23,11 +23,12 @@ case "$1" in
         killall xcape
         /usr/bin/gsettings set org.gnome.desktop.input-sources  xkb-options "['ctrl:nocaps, shift:both_capslock, apple:alupckeys', 'terminate:ctrl_alt_bksp']"
         xcape -e 'Control_L=Escape'  
-	#[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
+	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo mac > ~/.kb
 	fnt 13
 	/bin/wmctrl -n 1
+	xrandr --output eDP-1 --off
 	;;
 esac
 	

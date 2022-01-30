@@ -15,3 +15,6 @@ Opening in existing browser session.
 'Proprietary media' support is not installed. Attempting to fix this for the next restart.
 [25856:25856:1006/105942.745367:ERROR:sandbox_linux.cc(374)] InitializeSandbox() called with multiple threads in process gpu-process.
 Opening in existing browser session.
+'Proprietary media' support is not installed. Attempting to fix this for the next restart.
+Opening in existing browser session.
+[27610:27610:0100/000000.797364:ERROR:sandbox_linux.cc(376)] InitializeSandbox() called with multiple threads in process gpu-process.
