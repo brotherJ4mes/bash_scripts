@@ -1,7 +1,7 @@
 #!/bin/bash
 # show or hide sakura (spotify) depending on current state
 
-str='^spotify$|Pithos'
+str='^spotify$|Pithos|ncspot|Pandora|pianobar'
 #str='Pithos'
 
 

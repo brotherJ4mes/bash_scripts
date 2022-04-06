@@ -18,3 +18,97 @@ Opening in existing browser session.
 'Proprietary media' support is not installed. Attempting to fix this for the next restart.
 Opening in existing browser session.
 [27610:27610:0100/000000.797364:ERROR:sandbox_linux.cc(376)] InitializeSandbox() called with multiple threads in process gpu-process.
+'Proprietary media' support is not installed. Attempting to fix this for the next restart.
+[26500:26500:0319/110233.082072:ERROR:sandbox_linux.cc(377)] InitializeSandbox() called with multiple threads in process gpu-process.
+[26458:26486:0319/110235.589761:ERROR:chrome_browser_main_extra_parts_metrics.cc(227)] START: ReportBluetoothAvailability(). If you don't see the END: message, this is crbug.com/1216328.
+[26458:26486:0319/110235.589805:ERROR:chrome_browser_main_extra_parts_metrics.cc(230)] END: ReportBluetoothAvailability()
+[26458:26458:0319/110254.616869:ERROR:CONSOLE(1)] "syncDetachedTabInformation: The message port closed before a response was received.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0319/110257.683797:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0319/110257.683915:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0319/113325.685461:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[31016:2671:0319/193303.181274:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 42403109
+[26501:26522:0321/123850.350429:ERROR:quic_idle_network_detector.cc(102)] SetAlarm called after stopped
+[26458:26458:0321/142515.840804:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0321/173925.309974:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26501:26522:0321/190550.412729:ERROR:quic_idle_network_detector.cc(102)] SetAlarm called after stopped
+[26458:26458:0322/122622.329030:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0322/143225.450174:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+Fontconfig error: Cannot load default config file: No such file: (null)
+[26458:26458:0322/143228.967012:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0322/143234.846174:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26500:26559:0322/143236.170204:ERROR:node_controller.cc(585)] Trying to re-add dropped peer 6437B7783BDD0AEC.D7AEF7F5BAD6A510
+[26458:26458:0322/143237.966065:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0322/143241.242802:ERROR:fallback_task_provider.cc(123)] Every renderer should have at least one task provided by a primary task provider. If a "Renderer" fallback task is shown, it is a bug. If you have repro steps, please file a new bug and tag it as a dependency of crbug.com/739782.
+[3822:19:0322/143243.817191:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[3822:19:0322/143243.817740:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[3822:19:0322/143243.818369:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[3822:19:0322/143243.819704:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[3822:18:0322/143447.644920:ERROR:srtp_transport.cc(216)] Failed to unprotect RTP packet: size=78, seqnum=9723, SSRC=6668, previous failure count: 0
+[3822:19:0322/144346.130150:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[31016:2671:0322/151744.087991:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3857032846
+[31016:2671:0322/164955.973949:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 2511825350
+[31016:2671:0322/164957.543732:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3376103393
+[31016:2670:0322/165034.835122:ERROR:stun_port.cc(97)] Binding request timed out from 192.168.1.x:52191 (enp0s20f0u1u1i5)
+[26458:26458:0322/170040.174849:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/100044.071959:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+[26458:26458:0323/100044.805332:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/100049.173220:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/100054.909615:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[13527:19:0323/100148.204391:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[13527:19:0323/100148.204736:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[13527:19:0323/100412.152985:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[31016:2671:0323/101730.143999:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3042087303
+[13527:19:0323/102248.336758:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[13527:19:0323/102536.972910:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[13527:17:0323/110535.299837:ERROR:sdp_offer_answer.cc(3268)] Transceiver not found based on m-line index (INVALID_PARAMETER)
+[13527:17:0323/110616.403642:ERROR:sdp_offer_answer.cc(3268)] Transceiver not found based on m-line index (INVALID_PARAMETER)
+[13527:19:0323/110616.448758:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[31016:2671:0323/122251.768156:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 340340962
+[26458:26458:0323/125735.666243:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/125749.817152:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/125802.888897:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[3117:26:0323/125814.478677:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3953519355
+[3117:26:0323/125818.293248:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 1779312433
+[3117:25:0323/125853.340851:ERROR:stun_port.cc(97)] Binding request timed out from 192.168.1.x:56287 (enp0s20f0u1u1i5)
+[26458:26458:0323/143038.307625:ERROR:interface_endpoint_client.cc(658)] Message 0 rejected by interface blink.mojom.WidgetHost
+[26458:26458:0323/143038.922388:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/143042.754456:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[16633:19:0323/143056.015645:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[16633:19:0323/143056.015832:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[16633:18:0323/143217.366555:ERROR:srtp_transport.cc(216)] Failed to unprotect RTP packet: size=120, seqnum=20577, SSRC=6666, previous failure count: 0
+[16633:19:0323/143339.618975:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[16633:19:0323/143339.744010:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[16633:17:0323/143339.819431:ERROR:sdp_offer_answer.cc(3268)] Transceiver not found based on m-line index (INVALID_PARAMETER)
+[16633:17:0323/144325.446827:ERROR:sdp_offer_answer.cc(3268)] Transceiver not found based on m-line index (INVALID_PARAMETER)
+[16633:17:0323/144510.556411:ERROR:sdp_offer_answer.cc(3268)] Transceiver not found based on m-line index (INVALID_PARAMETER)
+[16633:19:0323/144510.623429:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[16633:19:0323/144510.766608:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[26458:26458:0323/151828.600412:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/151833.207613:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0323/151838.427052:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130407.208214:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130411.391601:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130419.760625:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130432.982038:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[4425:20:0324/130434.983523:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[4425:19:0324/130439.868190:ERROR:dtls_transport.cc(120)] DtlsTransport in connected state has incomplete TLS information
+[4425:19:0324/130439.868637:ERROR:dtls_srtp_transport.cc(214)] No DTLS-SRTP selected crypto suite
+[4425:19:0324/130439.870048:ERROR:dtls_transport.cc(120)] DtlsTransport in connected state has incomplete TLS information
+[4425:19:0324/130439.870325:ERROR:dtls_srtp_transport.cc(214)] No DTLS-SRTP selected crypto suite
+[26458:26458:0324/130617.883779:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130629.469531:ERROR:CONSOLE(1)] "syncDetachedTabInformation: The message port closed before a response was received.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130632.665327:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130636.156257:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[26458:26458:0324/130640.469116:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[5250:20:0324/130641.694940:ERROR:webrtc_video_engine.cc(3476)] Absent receive stream; ignoring clearing encoded frame sink for ssrc 0
+[5250:19:0324/130645.284298:ERROR:dtls_transport.cc(120)] DtlsTransport in connected state has incomplete TLS information
+[5250:19:0324/130645.284518:ERROR:dtls_srtp_transport.cc(214)] No DTLS-SRTP selected crypto suite
+[5250:19:0324/130645.286771:ERROR:dtls_transport.cc(120)] DtlsTransport in connected state has incomplete TLS information
+[5250:19:0324/130645.286948:ERROR:dtls_srtp_transport.cc(214)] No DTLS-SRTP selected crypto suite
+[26458:26458:0324/133002.979055:ERROR:CONSOLE(1)] "sendInitDataToInjectedScript: Could not establish connection. Receiving end does not exist.", source: chrome-extension://mpognobbkildjkofajifpdfhcoklimli/bundle.js (1)
+[3117:26:0324/133237.295330:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3625753001
+[3117:26:0324/133238.856011:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 1161281574
+[3117:25:0324/133316.139320:ERROR:stun_port.cc(97)] Binding request timed out from 192.168.1.x:55878 (enp0s20f0u1u1i5)
+[3117:26:0324/133337.434631:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 4139353830
+[3117:26:0324/133338.175146:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3435074163
+[3117:25:0324/133416.221925:ERROR:stun_port.cc(97)] Binding request timed out from 192.168.1.x:59039 (enp0s20f0u1u1i5)
