@@ -6,12 +6,14 @@ source /home/kessler/.scriptsrc
 
 # new method to determine if external monitor is present (faster)
 
-# below is failing right now:
-dock=$(lsusb | grep -ic genesys)  # (the name of the dock)
-[[ $dock -eq 0 ]] &&  /home/kessler/my_scripts/set_kb.sh w
-[[ $dock -gt 0 ]] &&  /home/kessler/my_scripts/set_kb.sh m 
+#dock=$(lsusb | grep -ic genesys)  # (the name of the dock)
+#[[ $dock -eq 0 ]] &&  /home/kessler/my_scripts/set_kb.sh w
+#[[ $dock -gt 0 ]] &&  /home/kessler/my_scripts/set_kb.sh m 
 
-#set_kb.sh m
+
+#(if monitor connected with 2K res, assume docked)
+[[ `xrandr | grep 2560` ]] && /home/kessler/my_scripts/set_kb.sh m
+[[ `xrandr | grep 2560` ]] || /home/kessler/my_scripts/set_kb.sh w
 
 #/home/kessler/my_scripts/set_kb.sh m 
 # run any other settings that dont seem to stick

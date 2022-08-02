@@ -15,7 +15,7 @@ case "$1" in
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo win > ~/.kb
 	fnt 14
-	/bin/wmctrl -n 2
+	#/bin/wmctrl -n 2
 	;;
 
 	m) # settings for docked mode (i.e. mac keyboard)
@@ -27,8 +27,9 @@ case "$1" in
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo mac > ~/.kb
 	fnt 13
-	/bin/wmctrl -n 1
+	#/bin/wmctrl -n 1
 	xrandr --output eDP-1 --off
+	xrandr -s 2560x1440
 	;;
 esac
 	
@@ -44,4 +45,5 @@ autocutsel -selection PRIMARY -fork &
 
 # daemon section (using systemctl is a pain due to env differences)
 pkill dl_watch.sh
+pkill dl_open.sh
 nohup ~/my_scripts/dl_watch.sh &> /dev/null &

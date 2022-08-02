@@ -1,5 +1,5 @@
 tmp=$(xdotool getactivewindow); 
-wmctrl -R opera
+wmctrl -R Opera
 sleep .2
 /usr/bin/xdotool key ctrl+r
 sleep .2
