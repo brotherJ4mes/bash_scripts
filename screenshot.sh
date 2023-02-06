@@ -2,7 +2,7 @@
 # read in args and take a screenshot
 
 args="$@"
-savedir=$HOME/pics/screenshots/
+savedir=$HOME/images/screenshots/
 
 echo -e "\0007"
 date +%b%d_%H%M%S | xargs -iz  gnome-screenshot $args -f ${savedir}/z.png

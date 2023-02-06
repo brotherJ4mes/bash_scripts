@@ -2,10 +2,10 @@
 while [ -f /home/kessler/Downloads/*opdownload ]; do sleep .1; done
 
 # check for new pdfs and open with mupdf
-find /home/kessler/Downloads/ -mmin -.1 -type f -iname '*.pdf'  |  xargs -r -n1 -P10 -iz /usr/local/bin/mupdf-x11 -C FFFFCC "z"
+find /home/kessler/Downloads/ -cmin -.1 -type f -iname '*.pdf'  |  xargs -r -n1 -P10 -iz /usr/local/bin/mupdf-x11 -C FFFFCC "z"
 
 # check for new image files and open with feh
-find /home/kessler/Downloads/ -mmin -.1 -type f -regextype egrep -regex '.*.png|.*.jpg|.*.gif'   | xargs -r -iz /usr/local/bin/feh -Z -x -g +1000+500 "z"
+find /home/kessler/Downloads/ -cmin -.1 -type f -regextype egrep -regex '.*.png|.*.jpg|.*.gif'   | xargs -r -iz /usr/local/bin/feh -Z -x -g +1000+500 "z"
 
 
 # old method (not even sure if it worked)

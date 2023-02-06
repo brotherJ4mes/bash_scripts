@@ -1,5 +1,5 @@
 #!/bin/bash
-icon="/home/kessler/pics/icons/$1"
+icon="/home/kessler/images/icons/$1"
 #timer=${2:-1}
 timer=${2:-.5}
 

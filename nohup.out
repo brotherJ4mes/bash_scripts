@@ -112,3 +112,5 @@ Fontconfig error: Cannot load default config file: No such file: (null)
 [3117:26:0324/133337.434631:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 4139353830
 [3117:26:0324/133338.175146:ERROR:call.cc(1587)] receive_rtp_config_ lookup failed for ssrc 3435074163
 [3117:25:0324/133416.221925:ERROR:stun_port.cc(97)] Binding request timed out from 192.168.1.x:59039 (enp0s20f0u1u1i5)
+'Proprietary media' support is not installed. Attempting to fix this for the next restart.
+entr: directory altered

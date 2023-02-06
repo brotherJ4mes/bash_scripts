@@ -13,6 +13,7 @@ case "$1" in
 	[[ $(nmcli radio wifi) == disabled ]] && nmcli radio wifi on
 	#/usr/bin/xmodmap -e "keycode 112=Alt_R" # make pgup act as alt (its missing under remap)
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
+	xrandr --output eDP-1 --auto
 	echo win > ~/.kb
 	fnt 14
 	#/bin/wmctrl -n 2
@@ -46,4 +47,5 @@ autocutsel -selection PRIMARY -fork &
 # daemon section (using systemctl is a pain due to env differences)
 pkill dl_watch.sh
 pkill dl_open.sh
+/usr/bin/gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 13'
 nohup ~/my_scripts/dl_watch.sh &> /dev/null &
