@@ -15,7 +15,7 @@ case "$1" in
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	xrandr --output eDP-1 --auto
 	echo win > ~/.kb
-	fnt 14
+	#fnt 14
 	#/bin/wmctrl -n 2
 	;;
 
@@ -27,7 +27,7 @@ case "$1" in
 	[[ $(nmcli radio wifi) == disabled ]] || nmcli radio wifi off
 	/usr/bin/xmodmap -e "keycode 169 = dead_greek dead_greek dead_greek dead_greek"
 	echo mac > ~/.kb
-	fnt 13
+	#fnt 13
 	#/bin/wmctrl -n 1
 	xrandr --output eDP-1 --off
 	xrandr -s 2560x1440
@@ -41,11 +41,12 @@ esac
 
 # do universal stuff
 killall autocutsel
-autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
-autocutsel -selection PRIMARY -fork &
+/usr/local/bin/autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
+/usr/local/bin/autocutsel -selection PRIMARY -fork &
 
 # daemon section (using systemctl is a pain due to env differences)
 pkill dl_watch.sh
+pkill entr
 pkill dl_open.sh
 /usr/bin/gsettings set org.gnome.desktop.interface monospace-font-name 'Monospace 13'
-nohup ~/my_scripts/dl_watch.sh &> /dev/null &
+#nohup ~/my_scripts/dl_watch.sh &> /dev/null &

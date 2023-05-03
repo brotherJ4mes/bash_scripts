@@ -11,10 +11,10 @@ if [ $? -eq 1 ]; then
 	echo google searching...
 	srch=$(echo $hl_str | sed -r 's/\s+/\+/g')
 	echo $srch
-	opera duckduckgo.com/?q=$srch
+	vivaldi duckduckgo.com/?q=$srch
 else
 	echo going directly to url...
-	opera $hl_str
+	vivaldi $hl_str
 fi
 
 

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 # check if window is currently "ABOVE"
 xprop -id $(xdotool getactivewindow) | grep NET_WM_STATE | grep -q ABOVE
 

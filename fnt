@@ -1,7 +1,9 @@
 #!/bin/bash
 
+
+echo dont use this it messes up horz spacing
 #fontstr="Menlo $1"
-dconf write /org/gnome/desktop/interface/monospace-font-name "'Menlo $1'"
+#dconf write /org/gnome/desktop/interface/monospace-font-name "'Menlo $1'"
 
 
 

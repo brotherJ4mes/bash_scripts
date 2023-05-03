@@ -1,14 +1,12 @@
 #!/bin/bash
-# show or hide sakura (spotify) depending on current state
+# show or hide 
 
-str='^spotify$|Pithos'
+str='meet'
 #str='Pithos'
 
-
-
-nwind=$(xdotool search --onlyvisible --name $str | wc -l)
-if [ $nwind -gt 1 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
-if [ $nwind -eq 0 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
+#nwind=$(xdotool search --onlyvisible --name $str | wc -l)
+#if [ $nwind -gt 1 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
+#if [ $nwind -eq 0 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
 
 source ~/.scriptsrc	
 if [[ -n $(xprop -id $(xdotool search --onlyvisible --name $str) | grep -i 'window state: Iconic') ]]; then
