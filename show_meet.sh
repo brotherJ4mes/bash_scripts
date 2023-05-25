@@ -1,7 +1,7 @@
 #!/bin/bash
 # show or hide 
 
-str='meet'
+str='^meet'
 #str='Pithos'
 
 #nwind=$(xdotool search --onlyvisible --name $str | wc -l)
