@@ -4,6 +4,7 @@ source /home/kessler/.scriptsrc
 
 #[[ $1 == "-f" ]] && rm /home/kessler/.kb
 
+#/home/kessler/my_scripts/set_kb.sh m
 #(if monitor connected with 2K res, assume docked)
 [[ `xrandr | grep 2560` ]] && /home/kessler/my_scripts/set_kb.sh m
 [[ `xrandr | grep 2560` ]] || /home/kessler/my_scripts/set_kb.sh w

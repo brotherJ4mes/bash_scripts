@@ -1,7 +1,7 @@
 #!/bin/bash
 # takes argument in and calls xdotool to navigate the menu bar with alt
 
-sleep .5
+sleep .1
 
 
 case $1 in
@@ -14,12 +14,14 @@ case $1 in
 		sub)
 			/usr/bin/xdotool key --clearmodifiers alt+o s r
 			;;
-		fnt+) # not working 
-			/usr/bin/xdotool key --clearmodifiers shift+ctrl+greater
+		fnt+) # almos working 
+			/usr/bin/xdotool key  shift+ctrl+period
+			#/usr/bin/xdotool key --clearmodifiers alt+o s o i
 
 			;;
 		fnt-) # not working 
-			/usr/bin/xdotool key --clearmodifiers shift+ctrl+less
+			/usr/bin/xdotool key  shift+ctrl+comma
+			#/usr/bin/xdotool key u-clearmodifiers shift+ctrl+less
 			;;
 		repimg)
 			/usr/bin/xdotool key --clearmodifiers alt+o M Z U

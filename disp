@@ -1,8 +1,0 @@
-ndisp=$(xrandr --listmonitors | wc -l)
-
-if [ $ndisp -eq 3 ]; then
-	xrandr --output eDP-1 --off; 
-else
-	xrandr --output eDP-1 --auto --below DP-1
-fi
-

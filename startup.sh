@@ -12,6 +12,8 @@ source ~/.scriptsrc
 ##start xbindkeys
 #xbindkeys
 
+#touch ~/ran_startup
+
 # call unlock script 
 rm ~/.kb # keyboard has not been configured
 /home/kessler/my_scripts/unlock.sh

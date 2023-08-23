@@ -1,5 +1,4 @@
 #!/bin/bash
-#/home/kessler/.linuxbrew/bin/gdbus monitor -y -d org.freedesktop.login1 | \
 
 /bin/gdbus monitor -y -d org.freedesktop.login1 | \
 while read line; do 
