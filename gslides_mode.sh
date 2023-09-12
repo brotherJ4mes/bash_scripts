@@ -17,8 +17,8 @@ if [[ $1 == 'on' ]]; then
 	dconf reset $dir/custom$num_prev/binding
 
 elif [[ $1 == 'off' ]]; then
-	dconf write $dir/custom${num_prev}/binding "'<Primary>period'"
-	dconf write $dir/custom$num_next/binding "'<Primary>comma'"
+	dconf write $dir/custom${num_prev}/binding "'<Primary>comma'"
+	dconf write $dir/custom$num_next/binding "'<Primary>period'"
 	/usr/local/bin/autocutsel -fork & # synchronize PRIMARY (mouse highlight) and CLIPBOARD (ctrl+c) 
 	/usr/local/bin/autocutsel -selection PRIMARY -fork &
 

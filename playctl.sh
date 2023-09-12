@@ -3,6 +3,7 @@
 export LD_LIBRARY_PATH=/usr/local/lib64; 
 
 if [[ $1 == 'next' ]]; then
+#	/usr/bin/notify-send next track
 	/usr/local/bin/playerctl -a $1 || echo -n 'n' > $HOME/.config/pianobar/ctl 
 	#/usr/local/bin/playerctl -a $1;
    	#/usr/bin/xdotool key --delay 100 --clearmodifiers ctrl+period;
