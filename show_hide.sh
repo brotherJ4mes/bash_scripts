@@ -6,7 +6,7 @@ source ~/.scriptsrc
 case $1 in
 
 	meet)
-	str='^meet'
+	str='^meet|MSCI'
 	;;
 
 	msg)

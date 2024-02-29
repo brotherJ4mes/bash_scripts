@@ -12,12 +12,9 @@
 
 # best solution
 ls "$1" | entr /bin/bash -c \
-	"pdflatex -interaction nonstopmode $1 | tee /tmp/tex.log;
+	"/usr/local/texlive/2023/bin/x86_64-linux/pdflatex -interaction nonstopmode $1 | tee /tmp/tex.log;
 	egrep -q '^Output written on' /tmp/tex.log && timeout .5 /usr/local/bin/feh -. -x -g 150x150-1-1 ~/images/icons/checkered-flag.png
 	pkill -HUP mupdf"
-
-
-
 
 
 #pdflatex -interaction nonstopmode $1 #| grep '\!' && $HOME/my_scripts/toast.sh skull.png || $HOME/my_scripts/toast.sh check-mark.png

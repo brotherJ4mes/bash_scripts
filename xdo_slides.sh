@@ -1,12 +1,12 @@
 #!/bin/bash
 # takes argument in and calls xdotool to navigate the menu bar with alt
 
-sleep .1
+sleep .2
 
 
 case $1 in
 		newslide)
-			/usr/bin/xdotool key --clearmodifiers alt+s n
+			/usr/bin/xdotool key --clearmodifiers alt+s alt+n
 			;;
 		super)
 			/usr/bin/xdotool key --clearmodifiers alt+o s s

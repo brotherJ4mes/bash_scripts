@@ -1,4 +1,5 @@
-nohup /bin/vivaldi --app="https://zoom.us/j/$1?pwd=$2"
+#nohup /bin/vivaldi --app="https://zoom.us/j/$1?pwd=$2"
+nohup /bin/google-chrome --app="https://zoom.us/j/$1?pwd=$2" &
 
 # resize
 sleep .5 
