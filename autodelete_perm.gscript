@@ -1,0 +1,92 @@
+// The name of the Gmail Label that is to be checked for purging?
+var LABELS_TO_DELETE = [  //NOT USED (hardcoded below)
+"read",
+"sent"
+];
+
+var mymail = "ex8nihilo@gmail.com";
+var TRIGGER_NAME = "dailyDeleteGmail";
+
+// Purge messages in the above label automatically after how many days?
+var DELETE_AFTER_DAYS = "0"; // this is unused (all read messages not marked save will be deleted)
+var TIMEZONE = "AEST";
+
+// Maximum number of threads to process per run
+var PAGE_SIZE = 150;
+
+// If number of threads exceeds page size, resume job after X mins (max execution time is 6 mins)
+var RESUME_FREQUENCY = 10;
+
+/*
+
+IMPLEMENTATION
+
+*/
+function Intialize() {
+  return;
+}
+
+function Install() {
+
+  // First run 30 secs after install
+  ScriptApp.newTrigger(TRIGGER_NAME)
+           .timeBased()
+           .at(new Date((new Date()).getTime() + 1000*30))
+           .create();
+  
+  // Run every 5 minutes thereafter
+  ScriptApp.newTrigger(TRIGGER_NAME)
+           .timeBased().everyMinutes(5).create();
+
+}
+
+function Uninstall() {
+  
+  var triggers = ScriptApp.getProjectTriggers();
+  for (var i=0; i<triggers.length; i++) {
+    ScriptApp.deleteTrigger(triggers[i]);
+  }
+  
+}
+
+function dailyDeleteGmail() {
+  
+  var age = new Date();
+  age.setDate(age.getDate() - DELETE_AFTER_DAYS);
+
+
+  var purge  = Utilities.formatDate(age, TIMEZONE, "yyyy-MM-dd");
+  //var search = "(label:{read,sent} AND -label:save) before:" + purge;
+  var search = "(label:{read,sent} AND -label:save)";
+  //var search = "(label:" + LABELS_TO_DELETE.joi]n(" OR label:") + ") before:" + purge;
+  //Logger.log("PURGE: " + purge);
+  Logger.log("SEARCH: " + search);
+  []
+  try {
+    
+    var threads = GmailApp.search(search, 0, PAGE_SIZE);
+    
+    // Resume again in 10 minutes
+    if (threads.length == PAGE_SIZE) {
+      Logger.log("Scheduling follow up job...");
+      ScriptApp.newTrigger(TRIGGER_NAME)
+               .timeBased()
+               .at(new Date((new Date()).getTime() + 1000*60*RESUME_FREQUENCY))
+               .create();
+    }
+    
+    // Move threads/messages which meet age criteria to trash
+    Logger.log("Processing " + threads.length + " threads.......");
+    for (var i=0; i<threads.length; i++) {
+      var thread = threads[i];
+        Logger.log("removing forever...");
+        Logger.log(thread.getId());
+        //thread.moveToTrash();  // move to trash
+        Gmail.Users.Threads.remove('me', thread.getId()); //delete forever
+        // for the above to work you need access to "Gmail" API
+        // Click the + to add a service, select Gmail then click the Add button.
+     }
+    
+  } catch (e) {}
+  
+}

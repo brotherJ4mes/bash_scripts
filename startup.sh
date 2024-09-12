@@ -16,9 +16,9 @@ source ~/.scriptsrc
 
 # call unlock script 
 rm ~/.kb # keyboard has not been configured
-/home/kessler/my_scripts/unlock.sh
+/home/j4mes/my_scripts/unlock.sh
 
 # start lock monitor 
-nohup /home/kessler/my_scripts/daemon_unlock.sh &> /dev/null &
+nohup /home/j4mes/my_scripts/daemon_unlock.sh &> /dev/null &
 
 #while true; do find ~/Downloads | entr -dp open_pdf.sh; done

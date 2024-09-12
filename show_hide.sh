@@ -22,7 +22,7 @@ case $1 in
 esac
 
 nwind=$(xdotool search --onlyvisible --name "$str" | wc -l)
-if [ $nwind -ne 1 ]; then /home/kessler/my_scripts/toast.sh hazard-sign.png; fi
+if [ $nwind -ne 1 ]; then /home/j4mes/my_scripts/toast.sh hazard-sign.png; fi
 
 source ~/.scriptsrc	
 if [[ -n $(xprop -id $(xdotool search --name $str) | grep -i 'window state: Iconic') ]]; then

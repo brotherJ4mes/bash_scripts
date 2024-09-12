@@ -1,19 +1,10 @@
 #!/bin/bash
 
-source /home/kessler/.scriptsrc
+source /home/j4mes/.scriptsrc
 
-#[[ $1 == "-f" ]] && rm /home/kessler/.kb
+set_kb.sh
+xrandr --output eDP-1  --scale 1.2
 
-#/home/kessler/my_scripts/set_kb.sh m
-#(if monitor connected with 2K res, assume docked)
-[[ `xrandr | grep 2560` ]] && /home/kessler/my_scripts/set_kb.sh m
-[[ `xrandr | grep 2560` ]] || /home/kessler/my_scripts/set_kb.sh w
-
-#/home/kessler/my_scripts/set_kb.sh m 
-# run any other settings that dont seem to stick
-#for id in $(xinput | grep -iE 'mouse|logitech' | grep -Eo 'id=[0-9]+' | grep -Eo '[0-9]+'); do
-#	xinput set-prop $id "Evdev Scrolling Distance" -1 1 1;
-#done
 
 
 
