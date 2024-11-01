@@ -6,6 +6,7 @@ notify-send 'hello world!'
 source ~/.scriptsrc
 
 
+drglk
 # increase screen res
 #big 2> /dev/null
 

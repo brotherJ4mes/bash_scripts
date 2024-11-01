@@ -11,7 +11,8 @@ if [[ $1 == 'next' ]]; then
 fi
 
 if [[ $1 == 'play-pause' ]]; then
-	/usr/local/bin/playerctl -a  $1 
+	#/usr/local/bin/playerctl -a  $1 
+	/usr/local/bin/playerctl -i chromium  $1 
 	echo -n 'p' > $HOME/.config/pianobar/ctl 
 fi
 

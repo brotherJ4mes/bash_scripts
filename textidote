@@ -1,0 +1,2 @@
+#!/bin/bash
+/usr/bin/java -jar ~/.local/share/textidote.jar --check en --dict ~/.local/share/textidote.dict --output html "$@"
