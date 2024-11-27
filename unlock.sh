@@ -9,6 +9,10 @@ source /home/kessler/.scriptsrc
 [[ `xrandr | grep 2560` ]] && /home/kessler/my_scripts/set_kb.sh m
 [[ `xrandr | grep 2560` ]] || /home/kessler/my_scripts/set_kb.sh w
 
+wmctrl -l | grep -q Chat || /home/kessler/apps/chat
+
+
+
 #/home/kessler/my_scripts/set_kb.sh m 
 # run any other settings that dont seem to stick
 #for id in $(xinput | grep -iE 'mouse|logitech' | grep -Eo 'id=[0-9]+' | grep -Eo '[0-9]+'); do
